@@ -8,8 +8,16 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import { Home } from "./component/home.js";
+function SimpleCounter(props) {
+	return (
+		<div className="counter">
+			<div className="hora">0</div>
+			<div className="minuto">0</div>
+			<div className="segundo">0</div>
+			<div className="mil">0</div>
+		</div>
+	);
+}
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<SimpleCounter />, document.querySelector("#app"));
